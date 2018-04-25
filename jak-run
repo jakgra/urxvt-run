@@ -1,0 +1,5 @@
+sub on_user_command {
+	my ($term) = @_;
+	$term->tt_paste("\canohup \ce>/dev/null 2>&1</dev/null&disown\n");
+        ()
+}
