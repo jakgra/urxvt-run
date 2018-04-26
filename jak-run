@@ -1,5 +1,9 @@
 sub on_user_command {
 	my ($term, $cmd) = @_;
-	if($cmd eq "jak-run:run") { $term->tt_paste("\canohup \ce>/dev/null 2>&1</dev/null&disown\n"); }
+	if($cmd eq "jak-run:run") {
+		$term->tt_paste("\canohup \ce>/dev/null 2>&1</dev/null&disown\n");
+	} elsif($cmd eq "jak-run:run_and_exit") {
+		$term->tt_paste("\canohup \ce>/dev/null 2>&1</dev/null&disown&&exit\n");
+	}
         ()
 }
