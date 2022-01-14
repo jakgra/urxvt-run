@@ -1,0 +1,5 @@
+_jak_run_completion() {
+   COMPREPLY=( $(compgen -c "$2") );
+}
+
+complete -o filenames -F _jak_run_completion r
